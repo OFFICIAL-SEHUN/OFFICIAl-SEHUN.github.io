@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박세훈 | AI Researcher Portfolio</title>
+    <title>박세훈 | AI & Robotics Researcher Portfolio</title>
     
     <!-- 폰트: Pretendard -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
@@ -282,10 +282,10 @@
             <!-- 프로필 사진 -->
             <!-- <img src="https://github.com/OFFICIAl-SEHUN.github.io/images/profile.jpg" alt="박세훈 프로필" class="profile-img"> -->
             <h1 class="name">박세훈</h1>
-            <p class="role">M.S. Student in AI @ Gachon Univ.</p>
+            <p class="role">M.S. Student in AI & Robotics @ Gachon Univ.</p>
             <p class="desc">
-                인공지능을 통해 실생활의 문제를 해결하는 연구를 하고 있습니다.<br>
-                주 관심 분야는 Computer Vision과 Deep Learning입니다.
+                인공지능과 로봇을 통해 실생활의 문제를 해결하는 연구를 하고 있습니다.<br>
+                주 관심 분야는 AI와 Robotics 입니다.
             </p>
             
             <div style="margin-top: 2rem;">
@@ -309,13 +309,19 @@
                     <div class="timeline-item">
                         <div class="time">2024.03 - Present</div>
                         <div class="degree">가천대학교 일반대학원 인공지능학과</div>
-                        <div class="school">석사 과정 (지도교수: OOO)</div>
+                        <div class="school">석사 과정 (지도교수: 최재용 교수)</div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="time">2020.03 - 2024.02</div>
-                        <div class="degree">가천대학교 소프트웨어학과</div>
-                        <div class="school">공학사 (GPA: 4.0/4.5)</div>
+                        <div class="time">2023.03 - 2025.02</div>
+                        <div class="degree">DSC공유대학 자율주행시스템학과</div>
+                        <div class="school">복수전공</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="time">2019.03 - 2025.02</div>
+                        <div class="degree">건양대학교 의료IT공학과</div>
+                        <div class="school">공학사 (GPA: 3.78/4.5)</div>
                     </div>
                 </div>
 
@@ -323,18 +329,20 @@
                 <div class="info-box">
                     <h3><i class="fas fa-microchip"></i> Research Interests</h3>
                     <p style="color:var(--text-gray); margin-bottom: 1.5rem;">
-                        • Computer Vision (Object Detection, Segmentation)<br>
+                        • Robotics (Autonomous Navigation)<br>
                         • Generative Models (GAN, Diffusion)<br>
-                        • Medical AI Analysis
+                        • AI for Robotics
                     </p>
 
                     <h3><i class="fas fa-code"></i> Skills</h3>
                     <div class="skill-tags">
                         <span class="tag">Python</span>
+                        <span class="tag">ROS2</span>
                         <span class="tag">PyTorch</span>
-                        <span class="tag">TensorFlow</span>
                         <span class="tag">OpenCV</span>
-                        <span class="tag">C++</span>
+                        <span class="tag">Gazebo</span>
+                        <span class="tag">MuJoCo</span>
+                        <span class="tag">Docker</span>
                         <span class="tag">Linux</span>
                         <span class="tag">Git</span>
                     </div>
@@ -397,41 +405,14 @@
 
                 <!-- 연구 과제 1 -->
                 <article class="project-card">
-                    <!-- 이미지가 있다면 img 태그 사용, 없다면 card-header 사용 -->
-                    <div class="card-header"><i class="fas fa-brain"></i></div>
+                    <div class="card-header"><i class="fas fa-trophy" style="color:#fbbf24;"></i></div>
                     <div class="card-body">
-                        <span class="badge badge-gov">산학협력과제</span>
-                        <h3 class="p-title">딥러닝 기반 이상 탐지 시스템 개발</h3>
+                        <span class="badge" style="background:#fef3c7; color:#d97706;">Awards / Competition</span>
+                        <h3 class="p-title">2025 극한로봇 경진대회 최우수상</h3>
                         <p class="p-desc">
-                            제조 공정 CCTV 데이터를 활용하여 불량품을 실시간으로 탐지하는 모델 경량화 및 알고리즘 개발 연구 수행.
+                            4족 보행 로봇과 7자유도 로봇팔을 융합한 플랫폼에 <b>slam_toolbox 기반 SLAM 및 AMCL Localization</b>을 적용하고, <b>PID 제어</b>를 통해 자율주행 및 구조 미션을 완수함.
                         </p>
-                        <p class="p-stack"><strong>Role:</strong> Data Preprocessing, Modeling (YOLOv8)</p>
-                    </div>
-                </article>
-
-                <!-- 연구 과제 2 -->
-                <article class="project-card">
-                    <div class="card-header"><i class="fas fa-laptop-medical"></i></div>
-                    <div class="card-body">
-                        <span class="badge badge-gov">정부지원과제</span>
-                        <h3 class="p-title">AI 의료 영상 진단 보조 솔루션</h3>
-                        <p class="p-desc">
-                            X-ray 영상을 분석하여 폐 질환 유무를 판단하는 분류 모델 연구. 데이터 증강 기법 비교 분석 수행.
-                        </p>
-                        <p class="p-stack"><strong>Role:</strong> Experiment, PyTorch Implementation</p>
-                    </div>
-                </article>
-
-                <!-- 개인 프로젝트 -->
-                <article class="project-card">
-                    <div class="card-header"><i class="fas fa-code-branch"></i></div>
-                    <div class="card-body">
-                        <span class="badge badge-personal">Personal Project</span>
-                        <h3 class="p-title">Style Transfer Web Service</h3>
-                        <p class="p-desc">
-                            사용자의 사진을 명화 스타일로 변환해주는 웹 서비스. Fast Style Transfer 알고리즘 적용 및 배포.
-                        </p>
-                        <p class="p-stack"><strong>Tech:</strong> Flask, React, AWS</p>
+                        <p class="p-stack"><strong>Tech:</strong> ROS2, SLAM(slam_toolbox), AMCL, PID Control</p>
                     </div>
                 </article>
 
@@ -455,7 +436,7 @@
             </div>
 
             <p style="font-size: 0.8rem; color: #64748b;">
-                &copy; 2024 Sehun Park. All Rights Reserved.
+                &copy; 2025 Sehun Park. All Rights Reserved.
             </p>
         </div>
     </footer>
