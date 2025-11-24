@@ -269,6 +269,41 @@
             transform: scale(1.5); /* 마우스 올리면 살짝 커짐 */
             z-index: 2; /* 커질 때 다른 이미지 위로 올라오게 */
         }
+
+        /* --- 버튼 그룹 컨테이너 (새로 추가) --- */
+        .hero-buttons {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center; /* 가운데 정렬 */
+            gap: 1rem; /* 버튼 사이 간격 */
+        }
+
+        /* 흰색 버튼 스타일 (인라인 스타일 대신 클래스로 관리) */
+        .btn-outline {
+            background: white;
+            color: var(--text-dark);
+            border: 1px solid #e2e8f0;
+        }
+        .btn-outline:hover {
+            background: #f1f5f9;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* --- 모바일 반응형 설정 (화면이 768px보다 작을 때) --- */
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column; /* 세로로 쌓기 */
+                width: 100%;
+                padding: 0 20px; /* 양옆 여백 */
+            }
+
+            .btn {
+                width: 100%; /* 버튼 너비를 화면에 꽉 차게 */
+                text-align: center; /* 글자 가운데 정렬 */
+                margin: 0 !important; /* 기존 여백 제거 */
+            }
+        }
     </style>
 </head>
 <body>
@@ -311,10 +346,10 @@
                 주 관심 분야는 AI for Robotics 입니다.
             </p>
             
-            <div style="margin-top: 2rem;">
-                <a href="#about" class="btn", style="margin-right:8px;">More About Me</a>
-                <!-- CV(이력서) 다운로드 버튼 예시 -->
-                <a href="#" class="btn" style="background:white; color:var(--text-dark); border:1px solid #e2e8f0; margin-left:8px;">Download CV</a>
+            <div class="hero-buttons">
+                <a href="#about" class="btn">More About Me</a>
+                <!-- 두 번째 버튼에 btn-outline 클래스 추가 -->
+                <a href="#" class="btn btn-outline">Download CV</a>
             </div>
         </div>
     </section>
@@ -439,13 +474,13 @@
                         
                         <!-- 이미지 갤러리 영역 -->
                         <div class="project-gallery">
-                            <img src="assets/KIRO_01.jpg" alt="Award Image 1">
-                            <img src="assets/KIRO_02.jpg" alt="Award Image 2">
+                            <img src="assets/KIRO_01.jpeg" alt="Award Image 1">
+                            <img src="assets/KIRO_02.jpeg" alt="Award Image 2">
                             <img src="assets/KIRO_03.jpeg" alt="Award Image 3">
                             <img src="assets/KIRO_04.jpeg" alt="Award Image 4">
                             <img src="assets/KIRO_05.jpeg" alt="Award Image 5">
-                            <img src="assets/KIRO_06.jpg" alt="Award Image 6">
-                            <img src="assets/KIRO_07.jpg" alt="Award Image 7">
+                            <img src="assets/KIRO_06.jpeg" alt="Award Image 6">
+                            <img src="assets/KIRO_07.jpeg" alt="Award Image 7">
                         </div>
                     </div>
                 </article>
