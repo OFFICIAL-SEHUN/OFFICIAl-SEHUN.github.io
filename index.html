@@ -246,6 +246,29 @@
             .name { font-size: 2.2rem; }
             .nav-links { display: none; }
         }
+
+        .project-gallery {
+            display: grid;
+            /* 화면 크기에 따라 자동으로 열 개수 조절 (최소 60px, 남는 공간 채움) */
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); 
+            gap: 8px;           /* 이미지 사이 간격 */
+            margin-top: 15px;   /* 텍스트와 이미지 사이 간격 */
+        }
+        
+        .project-gallery img {
+            width: 100%;        /* 칸에 꽉 차게 */
+            height: 60px;       /* 높이 고정 (정사각형 느낌) */
+            object-fit: cover;  /* 이미지가 찌그러지지 않고 꽉 차게 잘림 */
+            border-radius: 6px; /* 모서리 둥글게 */
+            border: 1px solid #e2e8f0; /* 얇은 테두리 */
+            transition: transform 0.2s; /* 마우스 올렸을 때 효과 */
+            cursor: pointer;
+        }
+        
+        .project-gallery img:hover {
+            transform: scale(1.5); /* 마우스 올리면 살짝 커짐 */
+            z-index: 2; /* 커질 때 다른 이미지 위로 올라오게 */
+        }
     </style>
 </head>
 <body>
@@ -284,14 +307,14 @@
             <h1 class="name">박세훈</h1>
             <p class="role">M.S. Student in AI & Robotics @ Gachon Univ.</p>
             <p class="desc">
-                인공지능과 로봇을 통해 실생활의 문제를 해결하는 연구를 하고 있습니다.<br>
-                주 관심 분야는 AI와 Robotics 입니다.
+                인공지능과 로봇을 통해 Traversability-Aware Navigation 문제를 해결하는 연구를 하고 있습니다.<br>
+                주 관심 분야는 AI for Robotics 입니다.
             </p>
             
             <div style="margin-top: 2rem;">
-                <a href="#about" class="btn">More About Me</a>
+                <a href="#about" class="btn", style="margin-right:8px;">More About Me</a>
                 <!-- CV(이력서) 다운로드 버튼 예시 -->
-                <a href="#" class="btn" style="background:white; color:var(--text-dark); border:1px solid #e2e8f0; margin-left:10px;">Download CV</a>
+                <a href="#" class="btn" style="background:white; color:var(--text-dark); border:1px solid #e2e8f0; margin-left:8px;">Download CV</a>
             </div>
         </div>
     </section>
@@ -307,9 +330,9 @@
                     <h3><i class="fas fa-graduation-cap"></i> Education</h3>
                     
                     <div class="timeline-item">
-                        <div class="time">2024.03 - Present</div>
-                        <div class="degree">가천대학교 일반대학원 인공지능학과</div>
-                        <div class="school">석사 과정 (지도교수: 최재용 교수)</div>
+                        <div class="time">2025.03 - Present</div>
+                        <div class="degree">가천대학교 인공지능학과 iRASC-Lab (지도교수: 최재용 교수)</div>
+                        <div class="school">석사 과정</div>
                     </div>
 
                     <div class="timeline-item">
@@ -329,8 +352,8 @@
                 <div class="info-box">
                     <h3><i class="fas fa-microchip"></i> Research Interests</h3>
                     <p style="color:var(--text-gray); margin-bottom: 1.5rem;">
-                        • Robotics (Autonomous Navigation)<br>
-                        • Generative Models (GAN, Diffusion)<br>
+                        • Robotics (Autonomous Navigation, Traversability-Aware Navigation)<br>
+                        • Generative Models (Diffusion)<br>
                         • AI for Robotics
                     </p>
 
@@ -408,11 +431,22 @@
                     <div class="card-header"><i class="fas fa-trophy" style="color:#fbbf24;"></i></div>
                     <div class="card-body">
                         <span class="badge" style="background:#fef3c7; color:#d97706;">Awards / Competition</span>
-                        <h3 class="p-title">2025 극한로봇 경진대회 최우수상</h3>
+                        <h3 class="p-title">2025 극한로봇 경진대회 최우수상 (KIRO 주관)</h3>
                         <p class="p-desc">
-                            4족 보행 로봇과 7자유도 로봇팔을 융합한 플랫폼에 <b>slam_toolbox 기반 SLAM 및 AMCL Localization</b>을 적용하고, <b>PID 제어</b>를 통해 자율주행 및 구조 미션을 완수함.
+                            4족 보행 로봇과 7자유도 로봇팔을 융합한 플랫폼에 <b>slam_toolbox 기반 Mapping 및 AMCL Localization</b>을 적용하고, <b>PID 제어</b>를 통해 자율주행 및 구조 미션을 완수함.
                         </p>
-                        <p class="p-stack"><strong>Tech:</strong> ROS2, SLAM(slam_toolbox), AMCL, PID Control</p>
+                        <p class="p-stack"><strong>Tech:</strong> ROS2, Mapping(slam_toolbox), Localization(AMCL), PID Control</p>
+                        
+                        <!-- 이미지 갤러리 영역 -->
+                        <div class="project-gallery">
+                            <img src="assets/KIRO_01.jpg" alt="Award Image 1">
+                            <img src="assets/KIRO_02.jpg" alt="Award Image 2">
+                            <img src="assets/KIRO_03.jpeg" alt="Award Image 3">
+                            <img src="assets/KIRO_04.jpeg" alt="Award Image 4">
+                            <img src="assets/KIRO_05.jpeg" alt="Award Image 5">
+                            <img src="assets/KIRO_06.jpg" alt="Award Image 6">
+                            <img src="assets/KIRO_07.jpg" alt="Award Image 7">
+                        </div>
                     </div>
                 </article>
 
